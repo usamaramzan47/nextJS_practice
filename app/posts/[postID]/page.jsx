@@ -1,10 +1,10 @@
 import React from 'react'
 
-function page() {
-   
+function page({ params }) {
+    
     return (
         <div>
-            dynamic page for posts
+            dynamic page for posts {params.postID}
         </div>
     )
 }
