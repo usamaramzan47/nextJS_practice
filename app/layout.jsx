@@ -8,13 +8,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex bg-red-800">
-          <h1 className="text-sm">navbar</h1>
-          <h1 className="text-3xl">sidebar</h1>
+      <body className="flex flex-col justify-around h-screen gap-2">
+        <h1 className="text-lg bg-pink-100 text-center">navbar</h1>
+        <div className="flex gap-4 h-full">
+          <div className="bg-yellow-100 wrapp h-full flex items-center justify-center border-r-2 border-blue-400 p-2">
+            <span className=" text-3xl">sidebar</span>
+          </div>
+          {children}
         </div>
-        {children}
-        <h1>footer</h1>
+        <h1 className="text-center bg-green-100">footer</h1>
       </body>
     </html>
   )
